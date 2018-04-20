@@ -1,0 +1,108 @@
+[RSP] [200] <blockchain.Chain object at 0x1009e3ef0>
+[RSP] [200] <blockchain.Chain object at 0x107e34ef0>
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524032846.062918, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524032846.062918, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524032909.2292511, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524033628.441559, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524033628.441559, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'index': 0, 'timestamp': 1524034990.267099, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524034990.267099, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}]}
+[RSP] [200] {'index': 2, 'timestamp': 1524035106.75742, 'previous_hash': 'f8b7113332123c61276f36d59eb9fa4a1779e751fb15ac7c1efaee4ce8b53814', 'data': 'alice', 'proof': '4'}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524035106.757321, 'previous_hash': None, 'data': 'jumblesale', 'proof': '1'}, {'index': 1, 'timestamp': 1524035106.757393, 'previous_hash': '10b1dc1fb8fa23c45f3ccd01ab473864af86213d45fc65e5e0d2c6f6dd13558c', 'data': 'bob', 'proof': '3'}, {'index': 2, 'timestamp': 1524035106.75742, 'previous_hash': 'f8b7113332123c61276f36d59eb9fa4a1779e751fb15ac7c1efaee4ce8b53814', 'data': 'alice', 'proof': '4'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524035349.364862, 'previous_hash': None, 'data': '{"name": "jumblesale", "value": 1}', 'proof': '1'}, {'index': 1, 'timestamp': 1524035349.364927, 'previous_hash': '27f405356badbab6989271630592a4417286f47d5984a55764c72295d5270c29', 'data': '{"name": "bob", "value": 1}', 'proof': '0'}, {'index': 2, 'timestamp': 1524035349.364955, 'previous_hash': '61da0a8b976794356d9a8e1bb8bcfc2275ee5153e7be06f15e678b9a2295d34a', 'data': '{"name": "alice", "value": 1}', 'proof': '0'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524035349.364862, 'previous_hash': None, 'data': '{"name": "jumblesale", "value": 1}', 'proof': '1'}, {'index': 1, 'timestamp': 1524035349.364927, 'previous_hash': '27f405356badbab6989271630592a4417286f47d5984a55764c72295d5270c29', 'data': '{"name": "bob", "value": 1}', 'proof': '0'}, {'index': 2, 'timestamp': 1524035349.364955, 'previous_hash': '61da0a8b976794356d9a8e1bb8bcfc2275ee5153e7be06f15e678b9a2295d34a', 'data': '{"name": "alice", "value": 1}', 'proof': '0'}]}
+[LOG] received note creation request with data: b''
+[LOG] received note creation request with data: b"{\n\t'proof': '1',\n\t'previous_hash': 'cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f',\n\t'recipient': 'jumblesale'\n}"
+[LOG] received note creation request with data: b"{\n\t'proof': '1',\n\t'previous_hash': 'cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f',\n\t'recipient': 'jumblesale'\n}"
+[LOG] Expecting property name enclosed in double quotes
+[LOG] received note creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "cda846e2f83857132d0cc2befa5f77a7d1580271459130adb113a9c33a2dd42f",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "52cc58a5f2ffa120b1c1d9ab09f8163060e9779ab37272bf967d1cdf40c572ef",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "632e05c84db9121c3044889b7870c5baaa066d51fa7701e735ce0b504e2accb8",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "632e05c84db9121c3044889b7870c5baaa066d51fa7701e735ce0b504e2accb8",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "dd33ffa29637aa13a9682df79f313aba9175a1cbbebb42c4641ed69d96a448b5",\n\t"recipient": "jumblesale"\n}'
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "2c4c06bfc3b695ec5a81140b31f7533e5ebea2c16a97adeae7b771a527cd63dc",\n\t"recipient": "jumblesale"\n}'
+[LOG] block for {} added
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "2c4c06bfc3b695ec5a81140b31f7533e5ebea2c16a97adeae7b771a527cd63dc",\n\t"recipient": "jumblesale"\n}'
+[RSP] [400] {'errors': ['Previous hash does not match!']}
+[LOG] received block creation request with data: b'{\n\t"proof": "1",\n\t"previous_hash": "7e612ac3d58181f01050fe8b298449667c5f5ae26c9f268f73532a7b3c2efd48",\n\t"recipient": "jumblesale"\n}'
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524080477.199497, 'previous_hash': None, 'data': '{"name": "jumblesale", "value": 1}', 'proof': '0'}, {'index': 1, 'timestamp': 1524080477.1995578, 'previous_hash': '0134127ac2e0022a7e67de2c2dba9361c28f341dba706330ed12d3491a4b2fbb', 'data': '{"name": "bob", "value": 1}', 'proof': '0'}, {'index': 2, 'timestamp': 1524080477.199584, 'previous_hash': 'fed9734663969cf1d35adca0451b2b3a2009ee6c51f14f1ac23a61382c86f208', 'data': '{"name": "alice", "value": 1}', 'proof': '0'}]}
+[LOG] received block creation request with data: b''
+[LOG] received block creation request with data: b''
+[RSP] [400] {'errors': ['"recipient" cannot be empty', '"previous_hash" cannot be empty', '"proof" cannot be empty']}
+[LOG] 8c0c80ef1a8dbe10946f09f38281de3896ea4ab69203f823fbd4d82cabda0427
+[LOG] next "previous_hash" will be: 05eb3071b67c4e39ff2842c3e4b95f4655482a28e4795de087c911be1764b537
+[LOG] next "previous_hash" will be fbdf6027a971558f6bcabcbcde69281657c97ba9f4b7458b131b2216a434ab45
+[LOG] next "proof" will be: 24
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "fbdf6027a971558f6bcabcbcde69281657c97ba9f4b7458b131b2216a434ab45",\n\t"proof": 24,\n\t"recipient": "jumblesale"\n}'
+[RSP] [400] {'errors': ['{} is not a valid proof! sha_256({proof} * {previous_proof}) = {hex_result}']}
+[LOG] next "previous_hash" will be 4dcf602e461d3a64d1e258a4a778d6e382b942d98f411de95bc1e03d8602f028
+[LOG] next "proof" will be: 24
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "4dcf602e461d3a64d1e258a4a778d6e382b942d98f411de95bc1e03d8602f028",\n\t"proof": 24,\n\t"recipient": "jumblesale"\n}'
+[RSP] [400] {'errors': ['4dcf602e461d3a64d1e258a4a778d6e382b942d98f411de95bc1e03d8602f028 is not a valid proof! sha_256(24 * 4dcf602e461d3a64d1e258a4a778d6e382b942d98f411de95bc1e03d8602f028) = b2b6c8b616e41479e32822ae59f44d1952ea429bea8f759cf467f46ad3c0aa80']}
+[LOG] next "previous_hash" will be 88868adaa8570af61e8a3c71f9a0ce5e892d18d0de97dc5124ec505d24c4aebb
+[LOG] next "proof" will be: 24
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "88868adaa8570af61e8a3c71f9a0ce5e892d18d0de97dc5124ec505d24c4aebb",\n\t"proof": 24,\n\t"recipient": "jumblesale"\n}'
+[LOG] next "previous_hash" will be afb5771e2ee4390257428c9115abf538106de8ee4be0943ee2091e489f78d71d
+[LOG] next "proof" will be: 24
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "afb5771e2ee4390257428c9115abf538106de8ee4be0943ee2091e489f78d71d",\n\t"proof": 24,\n\t"recipient": "jumblesale"\n}'
+[RSP] [400] {'errors': ['24 is not a valid proof! sha_256(24 * 4513) = b2b6c8b616e41479e32822ae59f44d1952ea429bea8f759cf467f46ad3c0aa80']}
+[LOG] next "previous_hash" will be 65744e3ed13b72317af970c8e7a133278a7c0ea64b454f221d4b1c63dc3fcf0c
+[LOG] next "proof" will be: 569
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "65744e3ed13b72317af970c8e7a133278a7c0ea64b454f221d4b1c63dc3fcf0c",\n\t"proof": 569,\n\t"recipient": "jumblesale"\n}'
+[LOG] next "previous_hash" will be ebdfcccc32f9d49b0eb83d7b8df30e1b306faa200210e7da770f9a2fa48af098
+[LOG] next "proof" will be: 569
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "ebdfcccc32f9d49b0eb83d7b8df30e1b306faa200210e7da770f9a2fa48af098",\n\t"proof": 569,\n\t"recipient": "jumblesale"\n}'
+[LOG] next "previous_hash" will be 46a97701afee123f2958d8d1f4ddac157d0f6700eeb410e7594f5999de297df7
+[LOG] next "proof" will be: 569
+[LOG] received block creation request with data: b'{\n\t"previous_hash": "46a97701afee123f2958d8d1f4ddac157d0f6700eeb410e7594f5999de297df7",\n\t"proof": 569,\n\t"recipient": "jumblesale"\n}'
+[LOG] block for jumblesale added
+[LOG] next "previous_hash" will be 5ff87ca875e5183de5c58c10b03509ca9ef5dff11c5318f022e0c7ec7e579c97
+[LOG] next "proof" will be: 4513
+[RSP] [201] {'blocks': [{'index': 0, 'timestamp': 1524165535.108775, 'previous_hash': None, 'data': '{"name": "jumblesale", "value": 1}', 'proof': 0}, {'index': 1, 'timestamp': 1524165535.108834, 'previous_hash': 'ab4c221a4afee277c7e6c7001eb113aad28d88d322b1fb93a87f11c8864cf267', 'data': '{"name": "bob", "value": 1}', 'proof': 2256}, {'index': 2, 'timestamp': 1524165535.10886, 'previous_hash': '3033d8017fac1e14d0b68116b79a6dde921960fa2a9862758c0f5095e3af5ff7', 'data': '{"name": "alice", "value": 1}', 'proof': 4513}, {'index': 3, 'timestamp': 1524165540.2130911, 'previous_hash': '46a97701afee123f2958d8d1f4ddac157d0f6700eeb410e7594f5999de297df7', 'data': '{"name": "jumblesale", "value": 1}', 'proof': 569}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524221925.419359, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524221983.333963, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [400] {'errors': ['"previous_hash" cannot be empty']}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222175.179273, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [400] {'errors': ['"message" cannot be empty']}
+[RSP] [400] {'errors': ['"previous_hash" cannot be empty', '"message" cannot be empty']}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222303.4718342, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [400] {'errors': ['3 is not a correct previous hash']}
+[LOG] next "previous_hash" is: "3bd1cad3bb2f5ca26996583c37d4ae705b7e8c01f56c0d24274409a3bfe849c6"
+[LOG] next "previous_hash" is: "4e3bd729c340adb822b1c1c2efd17477f5dd7aa778c81e0993d8f237a56e07e2"
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222616.674512, 'previous_hash': None, 'data': 'hello world'}, {'index': 1, 'timestamp': 1524222625.610892, 'previous_hash': '3bd1cad3bb2f5ca26996583c37d4ae705b7e8c01f56c0d24274409a3bfe849c6', 'data': 'hi'}]}
+[LOG] next "previous_hash" is: "608291625c99a189a50e54cfe2622df8237a8d2a1e85d1432fa951aefa865756"
+[LOG] next "previous_hash" is: "01da32f64d1c1a91ec1b66a602b66efcc0604b9774ba3c3cbfe4ab8119597da2"
+[RSP] [201] <simple_chain.Block object at 0x10d5916a0>
+[LOG] next "previous_hash" is: "671bf33802719c155a05377995cc093975f872de8a96c03ffdbd9febe70f5206"
+[RSP] [400] {'errors': ['608291625c99a189a50e54cfe2622df8237a8d2a1e85d1432fa951aefa865756 is not a correct previous hash']}
+[LOG] next "previous_hash" is: "8b5de19ef3b6d2e90a6e1d03a8bcfa255bc8901565f17d947557f6ae7c2d8b30"
+[RSP] [201] {'index': 1, 'timestamp': 1524222862.353677, 'previous_hash': '671bf33802719c155a05377995cc093975f872de8a96c03ffdbd9febe70f5206', 'data': 'hi'}
+[LOG] ----> next "previous_hash" is: "3bb0d86aa59aaeadbb47d52d4e5553f8e56f94d9082fa1aad389463fda667be7"
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524222993.661748, 'previous_hash': None, 'data': 'hello world'}]}
+[LOG] ----> next "previous_hash" is: "848265f072dbaddb5387ba7c6cfc61f1c0a36504659fdc151034d88f213e7a46"
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524228854.2244852, 'previous_hash': None, 'data': 'genesis block'}]}
+[LOG] ----> next "previous_hash" is: "3aa7e49775421198173396bbd4ea2d26cd1904648cabf0cc36a9dbe1a4ba9cb7"
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524229302.7849689, 'previous_hash': None, 'data': 'genesis block'}, {'index': 1, 'timestamp': 1524229302.785044, 'previous_hash': 'e4c98b0a3edfbfb1efc6c74b5a60a3e6468840ffcc4d1cd7de058d5e31ce1e2a', 'data': 'bob sends $4 to alice'}, {'index': 2, 'timestamp': 1524229302.785068, 'previous_hash': '61551091e2a58a8d5028715a78ec8a29d91e451f67981fb0fc6818e32e81e012', 'data': 'alice send $3 to bob'}, {'index': 3, 'timestamp': 1524229302.7850702, 'previous_hash': 'b6b9eb45395b098d2d5c84ee1dc566c9016a5a5a84d716a7df40d2795892b69a', 'data': 'bob sends $100 to charles'}, {'index': 4, 'timestamp': 1524229302.7850869, 'previous_hash': 'ac098d1cf156c5c5dbd746b08941b12a2ad68cc20408a02c2792b1f4845eec67', 'data': 'alice sends $1 to bob'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524229302.7849689, 'previous_hash': None, 'data': 'genesis block'}, {'index': 1, 'timestamp': 1524229302.785044, 'previous_hash': 'e4c98b0a3edfbfb1efc6c74b5a60a3e6468840ffcc4d1cd7de058d5e31ce1e2a', 'data': 'bob sends $4 to alice'}, {'index': 2, 'timestamp': 1524229302.785068, 'previous_hash': '61551091e2a58a8d5028715a78ec8a29d91e451f67981fb0fc6818e32e81e012', 'data': 'alice send $3 to bob'}, {'index': 3, 'timestamp': 1524229302.7850702, 'previous_hash': 'b6b9eb45395b098d2d5c84ee1dc566c9016a5a5a84d716a7df40d2795892b69a', 'data': 'bob sends $100 to charles'}, {'index': 4, 'timestamp': 1524229302.7850869, 'previous_hash': 'ac098d1cf156c5c5dbd746b08941b12a2ad68cc20408a02c2792b1f4845eec67', 'data': 'alice sends $1 to bob'}]}
+[RSP] [200] {'blocks': [{'index': 0, 'timestamp': 1524229302.7849689, 'previous_hash': None, 'data': 'genesis block'}, {'index': 1, 'timestamp': 1524229302.785044, 'previous_hash': 'e4c98b0a3edfbfb1efc6c74b5a60a3e6468840ffcc4d1cd7de058d5e31ce1e2a', 'data': 'bob sends $4 to alice'}, {'index': 2, 'timestamp': 1524229302.785068, 'previous_hash': '61551091e2a58a8d5028715a78ec8a29d91e451f67981fb0fc6818e32e81e012', 'data': 'alice send $3 to bob'}, {'index': 3, 'timestamp': 1524229302.7850702, 'previous_hash': 'b6b9eb45395b098d2d5c84ee1dc566c9016a5a5a84d716a7df40d2795892b69a', 'data': 'bob sends $100 to charles'}, {'index': 4, 'timestamp': 1524229302.7850869, 'previous_hash': 'ac098d1cf156c5c5dbd746b08941b12a2ad68cc20408a02c2792b1f4845eec67', 'data': 'alice sends $1 to bob'}]}
