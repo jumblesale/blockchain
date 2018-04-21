@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from server_common import *
 import json
 import log as log
@@ -82,6 +82,11 @@ def increase_cost():
     return make_response('', 201)
 
 
+@app.route('/leaderboard', methods=['GET'])
+def get_dashboard():
+    return render_template('leaderboard.html', leaders=generate_leader_board())
+
+
 def generate_leader_board() -> (str, int):
     leaders = {}
     global chain
@@ -102,4 +107,4 @@ def generate_leader_board() -> (str, int):
 
 if __name__ == '__main__':
     say_next_properties()
-    app.run(host='0.0.0.0', port=8080)
+    app.run(port=8080)

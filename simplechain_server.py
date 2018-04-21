@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from server_common import *
 import log as log
 import simple_chain as b
@@ -29,6 +29,11 @@ def post_block():
     response = create_json_response(b.last_block(chain).__dict__, status_code=201)
     say_next_previous_hash()
     return response
+
+
+@app.route('/dashboard', methods=['GET'])
+def get_dashboard():
+    return render_template('dashboard.html', blocks=reversed(chain.blocks))
 
 
 def say_next_previous_hash():

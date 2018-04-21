@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <h1>{% block header %}{% endblock %}</h1>
+</div>
+<div id="content">
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>

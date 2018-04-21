@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block header %}Blockchain dashboard{% endblock %}
+{% block body %}
+<ol>
+{% for block in blocks %}
+    <li value="{{ block.index }}">
+        <span class="mono">{{ block.previous_hash }}</span>
+        :: <strong class="mono">{{ block.data }}</strong>
+    </li>
+{% endfor %}
+</ol>
+{% endblock %}
+<script language="javascript">
+    setTimeout(function(){
+       window.location.reload(1);
+    }, 5000);
+</script>
