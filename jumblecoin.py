@@ -33,7 +33,7 @@ def _new_block(index: int, previous_hash: typing.Optional[str], data: str, proof
 def new_chain():
     genesis_block = _new_block(
         index=0, previous_hash=None,
-        data=json.dumps({'name': 'jumblesale', 'value': 1}),
+        data=json.dumps({'name': 'jumblesale', 'value': 100}),
         proof=0
     )
     return Chain(genesis_block)
@@ -65,7 +65,7 @@ def set_proof_cost(new_cost: int):
 
 def validate_proof(proof: int, previous_proof: int) -> (bool, str):
     hex_result = hashlib \
-        .sha256(str(proof * previous_proof).encode()) \
+        .sha256((str(previous_proof) + str(proof)).encode()) \
         .hexdigest()
     return hex_result.endswith('0' * PROOF_COST), hex_result
 
@@ -81,6 +81,8 @@ def validate_block_data_for_chain(chain: Chain, previous_hash, proof, data) -> (
     validation_success, hex_result = validate_proof(proof, last_proof)
     if not validation_success:
         errors.append(
-            '{} is not a valid proof! sha_256({} * {}) = {}'.format(proof, proof, last_proof, hex_result)
+            '{} is not a valid proof! sha_256({}{}) = {} - should end in {}'.format(
+                proof, proof, last_proof, hex_result, ('0' * PROOF_COST)
+            )
         )
     return not errors, errors

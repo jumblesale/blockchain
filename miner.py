@@ -13,7 +13,7 @@ def mine_proofs(previous_proof):
     while len(proofs) < TO_FIND:
         i += 1
         hex_result = hashlib\
-            .sha256(str(i * previous_proof).encode())\
+            .sha256((str(previous_proof) + str(i)).encode())\
             .hexdigest()
         if hex_result.endswith('0' * PROOF_COST):
             print(i)
@@ -24,13 +24,13 @@ def mine_proofs(previous_proof):
         print(b.validate_proof(proof, previous_proof))
 
 
-def mine_next(previous_proof):
+def mine_next(previous_proof) -> int:
     i = 0
     previous_proof = int(previous_proof)
     while True:
         i += 1
         hex_result = hashlib\
-            .sha256(str(i * previous_proof).encode())\
+            .sha256((str(previous_proof) + str(i)).encode())\
             .hexdigest()
         if hex_result.endswith('0' * PROOF_COST):
             return i

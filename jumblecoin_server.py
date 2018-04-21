@@ -3,6 +3,7 @@ from server_common import *
 import json
 import log as log
 import jumblecoin as b
+import miner
 from miner import mine_next
 
 # initialise the flask app
@@ -11,8 +12,11 @@ app = Flask(__name__)
 # create an empty chain
 chain = b.new_chain()
 
-b.add_new_block_to_chain(chain, json.dumps({'name': 'bob', 'value': 1}), 2256)
-b.add_new_block_to_chain(chain, json.dumps({'name': 'alice', 'value': 1}), 4513)
+previous_proof = b.last_block(chain).proof
+b.add_new_block_to_chain(chain, json.dumps({'name': 'bob', 'value': 1}), mine_next(previous_proof))
+previous_proof = b.last_block(chain).proof
+b.add_new_block_to_chain(chain, json.dumps({'name': 'alice', 'value': 1}), mine_next(previous_proof))
+log.log(json.dumps(chain.to_dict()))
 
 
 @app.route('/chain', methods=['GET'])
@@ -55,13 +59,47 @@ def post_new_block():
     chain = new_chain
     log.log('block for {} added'.format(json.loads(block_data)['name']))
     say_next_properties()
+    print(generate_leader_board())
     return create_json_response(chain.to_dict(), status_code=201)
 
 
 def say_next_properties():
-    log.log('next "previous_hash" will be {}'.format(b.hash_block(b.last_block(chain))))
-    log.log('next "proof" will be: {}'.format(mine_next(b.last_block(chain).proof)))
+    log.log('----> next "previous_hash" will be {}'.format(b.hash_block(b.last_block(chain))))
+    log.log('----> next "proof" will be: {}'.format(mine_next(b.last_block(chain).proof)))
+
+
+@app.route('/cost', methods=['POST'])
+def increase_cost():
+    data = parse_request_data(request)
+    if 'secret' not in data or data['secret'] != '8fb5c3b9d42e089f74dd1b9accda2f507c1e589aef6876b2697b0de42fb65255':
+        log.log('secret missing or invalid')
+        return make_response('', 404)
+    new_cost = data['cost']
+    b.PROOF_COST = new_cost
+    miner.PROOF_COST = new_cost
+    log.log('NEW COST is now {}'.format(b.PROOF_COST))
+    say_next_properties()
+    return make_response('', 201)
+
+
+def generate_leader_board() -> (str, int):
+    leaders = {}
+    global chain
+    for block in chain.blocks:
+        data = json.loads(block.data)
+        value = int(data['value'])
+        name = data['name']
+        if name not in leaders:
+            leaders[name] = value
+        else:
+            leaders[name] += value
+    sorted_leaders = sorted(leaders, key=leaders.get)
+    leader_tuples = []
+    for leader in reversed(sorted_leaders):
+        leader_tuples.append((leader, leaders[leader]))
+    return leader_tuples
+
 
 if __name__ == '__main__':
     say_next_properties()
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=8080)
