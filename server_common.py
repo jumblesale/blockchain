@@ -10,8 +10,9 @@ def create_error_response(errors: [str]):
     )
 
 
-def create_json_response(payload, status_code=200):
-    log.response(status_code, payload)
+def create_json_response(payload, status_code=200, suppress_logging=False):
+    if not suppress_logging:
+        log.response(status_code, payload)
     data = json.dumps(payload)
     response = make_response(data, status_code)
     response.headers['Content-Type'] = 'application/json'

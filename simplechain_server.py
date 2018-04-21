@@ -2,20 +2,20 @@ from flask import Flask, request
 from server_common import *
 import log as log
 import simple_chain as b
-
 # initialise the flask app
 app = Flask(__name__)
 
 
 @app.route('/chain', methods=['GET'])
 def get_entire_chain():
-    return create_json_response(chain.to_dict())
+    return create_json_response(chain.to_dict(), suppress_logging=True)
 
 
 @app.route('/block', methods=['POST'])
 def post_block():
     data = parse_request_data(request)
     errors = []
+    global chain
     if 'previous_hash' not in data or data['previous_hash'] == '':
         errors.append('"previous_hash" cannot be empty')
     elif data['previous_hash'] != b.next_previous_hash(chain):
@@ -23,10 +23,12 @@ def post_block():
     if 'message' not in data or data['message'] == '':
         errors.append('"message" cannot be empty')
     if errors:
+        say_next_previous_hash()
         return create_error_response(errors)
-    b.add_new_block_to_chain(chain, data['previous_hash'], data['message'])
+    chain = b.add_new_block_to_chain(chain, data['previous_hash'], data['message'])
+    response = create_json_response(b.last_block(chain).__dict__, status_code=201)
     say_next_previous_hash()
-    return create_json_response(b.last_block(chain).__dict__, status_code=201)
+    return response
 
 
 def say_next_previous_hash():
