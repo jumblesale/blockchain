@@ -33,7 +33,7 @@ def _new_block(index: int, previous_hash: typing.Optional[str], data: str, proof
 def new_chain():
     genesis_block = _new_block(
         index=0, previous_hash=None,
-        data=json.dumps({'name': 'jumblesale', 'value': 100}),
+        data=json.dumps({'name': 'jumblesale', 'value': 10}),
         proof=0
     )
     return Chain(genesis_block)
