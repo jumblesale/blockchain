@@ -16,6 +16,8 @@ previous_proof = b.last_block(chain).proof
 b.add_new_block_to_chain(chain, json.dumps({'name': 'bob', 'value': 1}), mine_next(previous_proof))
 previous_proof = b.last_block(chain).proof
 b.add_new_block_to_chain(chain, json.dumps({'name': 'alice', 'value': 1}), mine_next(previous_proof))
+previous_proof = b.last_block(chain).proof
+b.add_new_block_to_chain(chain, json.dumps({'name': 'charles', 'value': 1}), mine_next(previous_proof))
 log.log(json.dumps(chain.to_dict()))
 
 
@@ -84,7 +86,11 @@ def increase_cost():
 
 @app.route('/leaderboard', methods=['GET'])
 def get_dashboard():
-    return render_template('leaderboard.html', leaders=generate_leader_board())
+    return render_template(
+        'leaderboard.html',
+        leaders=generate_leader_board(),
+        blocks=chain.blocks
+    )
 
 
 def generate_leader_board() -> (str, int):

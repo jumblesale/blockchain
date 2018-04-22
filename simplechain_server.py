@@ -36,6 +36,11 @@ def get_dashboard():
     return render_template('dashboard.html', blocks=reversed(chain.blocks))
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('simplechain.html')
+
+
 def say_next_previous_hash():
     log.log('----> next "previous_hash" is: "{}"'.format(get_next_previous_hash()))
 
