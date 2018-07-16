@@ -48,6 +48,7 @@ def say_next_previous_hash():
 def get_next_previous_hash():
     return b.next_previous_hash(chain)
 
+
 if __name__ == '__main__':
     # create an empty chain
     chain = b.new_chain()

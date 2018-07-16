@@ -35,6 +35,7 @@ def mine_next(previous_proof) -> int:
         if hex_result.endswith('0' * PROOF_COST):
             return i
 
+
 if __name__ == '__main__':
     mine_next(1)
     mine_proofs(sys.argv[1])

@@ -8,7 +8,7 @@ PROOF_COST = 3
 
 
 class Block:
-    def __init__(self, index: int, timestamp: str, previous_hash: typing.Optional[str], data: str, proof: int):
+    def __init__(self, index: int, timestamp: float, previous_hash: typing.Optional[str], data: str, proof: int):
         self.index = index
         self.timestamp = timestamp
         self.previous_hash = previous_hash

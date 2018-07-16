@@ -4,7 +4,7 @@ from hash import hash_object as hash_block
 
 
 class Block:
-    def __init__(self, index: int, timestamp: str, previous_hash: typing.Optional[str], data: str):
+    def __init__(self, index: int, timestamp: float, previous_hash: typing.Optional[str], data: str):
         self.index = index
         self.timestamp = timestamp
         self.previous_hash = previous_hash
